@@ -33,7 +33,7 @@
 <nav class="nav" aria-label="Primary">
   <div class="nav-inner">
     <a href="index.html" class="logo" aria-label="Spray Gun Autobody — home">
-      <img src="logo.png" alt="Spray Gun Paint &amp; Autobody" class="logo-img" />
+      <img src="assets/logo.png" alt="The Spray Gun Auto Body" class="logo-img" />
     </a>
     <div class="nav-links">${linksHTML}</div>
     <div class="nav-cta">
@@ -70,7 +70,7 @@
           <span>Spray Gun<small style="color:var(--mute);">Autobody · LV</small></span>
         </div>
         <p style="font-size:14px;color:var(--mute);margin-top:20px;max-width:34ch;line-height:1.5;">
-          Las Vegas's family-owned auto body shop. Collision repair, custom paint, fleet &amp; heavy-duty work since 2005.
+          Las Vegas's family-owned auto body shop. Collision repair, custom paint, fleet &amp; heavy-duty work. 30 years in the business.
         </p>
       </div>
       <div>
@@ -99,11 +99,86 @@
       </div>
     </div>
     <div class="foot-bot">
-      <span>© ${new Date().getFullYear()} Spray Gun Autobody · Las Vegas, NV · Family owned since 2005</span>
+      <span>© ${new Date().getFullYear()} Spray Gun Autobody · Las Vegas, NV · 30 years serving Las Vegas</span>
       <span>Site by Spray Gun · Original design</span>
     </div>
   </div>
 </footer>
+    `;
+  }
+
+  function renderFloat() {
+    return `
+<div class="sg-float" id="sg-float">
+  <div class="sg-float-badge">30<small>yrs</small></div>
+  <a href="tel:7028325323" class="sg-float-phone" aria-label="Call (702) 832-5323">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    (702) 832-5323
+  </a>
+</div>
+<style>
+.sg-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  pointer-events: none;
+}
+.sg-float-badge {
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  box-shadow: 0 4px 14px -4px rgba(0,0,0,0.22);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.sg-float-badge small {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.sg-float-phone {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 11px 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  box-shadow: 0 6px 20px -6px rgba(0,0,0,0.35);
+  pointer-events: all;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.sg-float-phone:hover {
+  background: var(--yellow);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+@media (max-width: 480px) {
+  .sg-float { bottom: 16px; right: 16px; }
+  .sg-float-phone { font-size: 12px; padding: 10px 14px; }
+}
+</style>
     `;
   }
 
@@ -114,6 +189,11 @@
     document.querySelectorAll("[data-footer]").forEach((el) => {
       el.outerHTML = renderFooter(el.getAttribute("data-footer"));
     });
+
+    // Floating phone + years badge
+    const floatEl = document.createElement('div');
+    floatEl.innerHTML = renderFloat();
+    document.body.appendChild(floatEl);
 
     // Mobile menu
     const burger = document.getElementById("hamburger");
