@@ -4,8 +4,8 @@
    ============================================================ */
 
 (function () {
-  const PHONE = "(702) 832-5323";
-  const PHONE_TEL = "tel:7028325323";
+  const PHONE = "(702) 795-8686";
+  const PHONE_TEL = "tel:7027958686";
   const ADDRESS = "4245 Production Ct, Las Vegas, NV 89115";
 
   const PAGES = [
@@ -60,7 +60,7 @@
   <div class="wrap">
     <div class="foot-big">
       <span>Need a quote?</span>
-      <small>(702) 832-5323</small>
+      <small>(702) 795-8686</small>
     </div>
     <div style="height:56px;"></div>
     <div class="foot-grid">
@@ -111,9 +111,9 @@
     return `
 <div class="sg-float" id="sg-float">
   <div class="sg-float-badge">30<small>yrs</small></div>
-  <a href="tel:7028325323" class="sg-float-phone" aria-label="Call (702) 832-5323">
+  <a href="tel:7027958686" class="sg-float-phone" aria-label="Call (702) 795-8686">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-    (702) 832-5323
+    (702) 795-8686
   </a>
 </div>
 <style>
@@ -130,19 +130,7 @@
 }
 .sg-float-badge {
   background: var(--yellow);
-  color: var(--ink);
-  font-family: var(--display);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  padding: 6px 12px;
-  border-radius: 999px;
-  display: flex;
-  align-items: baseline;
-  gap: 3px;
-  box-shadow: 0 4px 14px -4px rgba(0,0,0,0.22);
-  pointer-events: none;
-  white-space: nowrap;
+  color: var(--paper);
 }
 .sg-float-badge small {
   font-family: var(--mono);
@@ -171,7 +159,7 @@
 }
 .sg-float-phone:hover {
   background: var(--yellow);
-  color: var(--ink);
+  color: #fff;
   transform: translateY(-2px);
 }
 @media (max-width: 480px) {
