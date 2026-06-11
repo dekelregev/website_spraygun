@@ -264,21 +264,21 @@
 <!-- ============================================================
      OWNER QUOTE
      ============================================================ -->
-<section class="section about-section" style="background:var(--ink);color:var(--paper);" data-screen-label="01 Home — About">
+<section class="section ofer-section" style="background:var(--ink);color:var(--paper);" data-screen-label="01 Home — Owner Quote">
   <div class="wrap">
-    <div class="about-layout">
-      <div class="about-head">
-        <div class="eyebrow eyebrow-dot" style="color:var(--yellow);">About the shop</div>
-        <h2 class="h-1" style="margin-top:14px;color:var(--paper);">Serving Las Vegas<br /><span style="color:var(--yellow);">since 1994.</span></h2>
-      </div>
-      <div class="about-body">
-        <p>The Spray Gun Auto Body has been serving Las Vegas for over 30 years, specializing in heavy-duty collision repair, commercial fleet repairs, truck body repair, bus repairs, RV repairs, fiberglass restoration, and automotive collision repair.</p>
-        <p>Our facility is equipped with a 67-foot commercial spray booth, allowing us to repair and refinish large vehicles, including buses, motorhomes, box trucks, commercial fleets, and heavy-duty trucks. From minor damage to major collision repairs, our experienced team is committed to delivering high-quality workmanship, precise color matching, and exceptional customer service.</p>
-        <p>We work directly with insurance companies and fleet management providers to streamline the repair process and minimize downtime. Whether you're an individual vehicle owner or manage an entire fleet, The Spray Gun has the experience, equipment, and expertise to get your vehicle back on the road quickly and safely.</p>
-        <p class="about-highlight">Serving Las Vegas since 1994, The Spray Gun is proud to be Southern Nevada's trusted source for heavy-duty collision repair, commercial vehicle refinishing, fiberglass repair, fleet painting, and auto body restoration.</p>
-        <div class="about-cta">
-          <a href="tel:7027958686" class="btn btn-yellow btn-lg">(702) 795-8686 — Call us <span class="arrow">→</span></a>
-          <a href="about.html" class="btn btn-ghost-dark btn-lg">Learn more about us <span class="arrow">→</span></a>
+    <div class="ofer-block">
+      <div class="ofer-quotemark" aria-hidden="true">&ldquo;</div>
+      <blockquote class="ofer-text">
+        Hi, I'm Ofer Nurkin. I've owned The Spray Gun Auto Body now for thirty years. My customers have brought their cars back and have taken great care of my family and me. In return, I'm going to take care of you.
+      </blockquote>
+      <p class="ofer-sub">
+        Call me right now — I'll smooth out the collision repair process, handle your claim, take care of your vehicle, and return it to pre-accident condition using the manufacturer's specifications. <strong style="color:var(--yellow);">Stress-free.</strong>
+      </p>
+      <div class="ofer-footer">
+        <a href="tel:7027958686" class="btn btn-yellow btn-lg">(702) 795-8686 — Call Ofer directly</a>
+        <div class="ofer-sig">
+          <span class="ofer-name">Ofer Nurkin</span>
+          <small>Owner &amp; founder · The Spray Gun Auto Body · 30 years</small>
         </div>
       </div>
     </div>
@@ -349,86 +349,6 @@
 </section>
 
 <!-- ============================================================
-     DAMAGE REPORT FORM
-     ============================================================ -->
-<section class="section" id="report" data-screen-label="01 Home — Report Damage">
-  <div class="wrap">
-    <div class="report-layout">
-      <div class="report-side">
-        <div class="eyebrow eyebrow-dot">Report damage</div>
-        <h2 class="h-1" style="margin-top:14px;">Tell us what<br />happened.</h2>
-        <p class="lead" style="margin-top:16px;">
-          Upload photos and describe the damage. We'll get back to you within the hour with an honest assessment and free estimate.
-        </p>
-        <div class="report-trust">
-          <div>
-            <strong>1 hr</strong>
-            <small>Response time</small>
-          </div>
-          <div>
-            <strong>Free</strong>
-            <small>Estimates always</small>
-          </div>
-          <div>
-            <strong>Free</strong>
-            <small>Pickup &amp; delivery</small>
-          </div>
-        </div>
-      </div>
-      <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="report-form" id="report-form">
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-        <input type="hidden" name="subject" value="New Damage Report — The Spray Gun Website" />
-        <input type="hidden" name="from_name" value="Spray Gun Website" />
-        <input type="checkbox" name="botcheck" style="display:none;" />
-        <div class="form-grid">
-          <div class="field">
-            <label for="hp-name">Full name</label>
-            <input type="text" id="hp-name" name="name" required placeholder="John Smith" />
-          </div>
-          <div class="field">
-            <label for="hp-phone">Phone number</label>
-            <input type="tel" id="hp-phone" name="phone" required placeholder="(702) 555-1234" />
-          </div>
-        </div>
-        <div class="field" style="margin-top:20px;">
-          <label for="hp-email">Email address</label>
-          <input type="email" id="hp-email" name="email" required placeholder="john@example.com" />
-        </div>
-        <div class="field" style="margin-top:20px;">
-          <label for="hp-message">What happened?</label>
-          <textarea id="hp-message" name="message" required placeholder="Describe the damage, accident, or work needed..."></textarea>
-        </div>
-        <div class="field" style="margin-top:20px;">
-          <label>Upload photos of the damage</label>
-          <div class="upload-zone" id="hp-upload-zone">
-            <input type="file" name="attachment" id="hp-photos" accept="image/*" multiple class="upload-input" />
-            <div class="upload-prompt">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-              <p>Click to upload or drag photos here</p>
-              <small>JPG, PNG — up to 5 MB each, max 3 files</small>
-            </div>
-            <div class="upload-thumbs" id="hp-thumbs"></div>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-yellow btn-lg" style="margin-top:28px;width:100%;justify-content:center;" id="hp-submit">
-          Send damage report <span class="arrow">→</span>
-        </button>
-        <p style="margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);text-align:center;">
-          We respond within 1 hour during business hours
-        </p>
-        <div class="form-success" id="hp-success">
-          <div class="form-success-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <h3 class="h-3">Report received.</h3>
-          <p>We'll review your photos and get back to you within the hour. If it's after hours, first thing tomorrow.</p>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
      CTA
      ============================================================ -->
 <section class="section" data-screen-label="01 Home — CTA">
@@ -440,8 +360,8 @@
           Let's fix your car.
         </h2>
         <div class="row" style="margin-top:32px; gap:14px;">
-          <a href="tel:7027958686" class="btn btn-ink btn-lg">(702) 795-8686</a>
-          <a href="#report" class="btn btn-ghost btn-lg">Submit photos <span class="arrow">→</span></a>
+          <a href="contact.html#quote" class="btn btn-ink btn-lg">Get a free quote <span class="arrow">→</span></a>
+          <a href="tel:7027958686" class="btn btn-ghost btn-lg">(702) 795-8686</a>
         </div>
         <div class="cta-meta">
           <span>Mon–Fri 7:30 AM – 5:00 PM</span>
@@ -457,67 +377,6 @@
 
 <script src="assets/shared.js"></script>
 <script>
-  /* Upload preview + form submission */
-  (function () {
-    function setupForm(formId, zoneId, inputId, thumbsId, submitId, successId) {
-      var form = document.getElementById(formId);
-      var zone = document.getElementById(zoneId);
-      var input = document.getElementById(inputId);
-      var thumbs = document.getElementById(thumbsId);
-      var submitBtn = document.getElementById(submitId);
-      if (!form || !zone || !input) return;
-
-      /* drag-over highlight */
-      zone.addEventListener("dragover", function (e) { e.preventDefault(); zone.classList.add("dragover"); });
-      zone.addEventListener("dragleave", function () { zone.classList.remove("dragover"); });
-      zone.addEventListener("drop", function (e) {
-        e.preventDefault(); zone.classList.remove("dragover");
-        if (e.dataTransfer.files.length) {
-          input.files = e.dataTransfer.files;
-          showThumbs(input.files);
-        }
-      });
-
-      /* preview thumbs */
-      input.addEventListener("change", function () { showThumbs(input.files); });
-      function showThumbs(files) {
-        thumbs.innerHTML = "";
-        Array.from(files).slice(0, 3).forEach(function (f) {
-          var img = document.createElement("img");
-          img.className = "upload-thumb";
-          img.src = URL.createObjectURL(f);
-          thumbs.appendChild(img);
-        });
-      }
-
-      /* AJAX submit */
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Sending…";
-        var data = new FormData(form);
-        fetch("https://api.web3forms.com/submit", { method: "POST", body: data })
-          .then(function (r) { return r.json(); })
-          .then(function (res) {
-            if (res.success) {
-              form.classList.add("submitted");
-            } else {
-              alert("Something went wrong. Please call us at (702) 795-8686.");
-              submitBtn.disabled = false;
-              submitBtn.textContent = "Send damage report →";
-            }
-          })
-          .catch(function () {
-            alert("Network error. Please call us at (702) 795-8686.");
-            submitBtn.disabled = false;
-            submitBtn.textContent = "Send damage report →";
-          });
-      });
-    }
-
-    setupForm("report-form", "hp-upload-zone", "hp-photos", "hp-thumbs", "hp-submit", "hp-success");
-  })();
-
   /* Before/After slider */
   (function () {
     const wrap = document.getElementById("ba");
@@ -610,7 +469,7 @@
 .hero-line { display: inline; }
 .hero-mark {
   background: var(--yellow);
-  color: var(--ink);
+  color: #fff;
   padding: 0 0.18em;
   display: inline;
   box-decoration-break: clone;
@@ -685,18 +544,18 @@
 .hero-badge-spin {
   position: absolute; inset: 0;
   animation: spin 18s linear infinite;
-  color: var(--ink);
+  color: #fff;
 }
 .hero-badge-inner {
   display: flex; flex-direction: column; align-items: center; z-index: 2;
 }
 .hero-badge-inner span {
   font-family: var(--display); font-size: 28px; font-weight: 700;
-  letter-spacing: -0.04em; line-height: 1; color: var(--ink);
+  letter-spacing: -0.04em; line-height: 1; color: #fff;
 }
 .hero-badge-inner small {
   font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em;
-  text-transform: uppercase; margin-top: 2px; color: rgba(11,11,12,0.6);
+  text-transform: uppercase; margin-top: 2px; color: rgba(255,255,255,0.8);
 }
 
 /* hero ticker bar — dark band for contrast */
@@ -779,9 +638,9 @@
   transition: color 0.3s, transform 0.3s;
 }
 .svc-card:hover .svc-cta { transform: translateX(4px); }
-.svc-feature { background: var(--yellow); color: var(--ink); }
-.svc-feature .svc-num { color: rgba(11,11,12,0.5); }
-.svc-feature .svc-cta { color: rgba(11,11,12,0.6); }
+.svc-feature { background: var(--yellow); color: #fff; }
+.svc-feature .svc-num { color: rgba(255,255,255,0.6); }
+.svc-feature .svc-cta { color: rgba(255,255,255,0.8); }
 .svc-feature:hover { background: var(--ink); }
 .svc-feature:hover .svc-num,
 .svc-feature:hover .svc-cta { color: var(--yellow); }
@@ -953,161 +812,66 @@
 
 footer { margin-top: 0; }
 
-/* ABOUT SECTION */
-.about-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 64px;
-  align-items: start;
-}
-@media (max-width: 900px) { .about-layout { grid-template-columns: 1fr; gap: 32px; } }
-.about-head { position: sticky; top: 96px; }
-@media (max-width: 900px) { .about-head { position: static; } }
-.about-body {
+/* OWNER QUOTE SECTION */
+.ofer-block {
+  max-width: 860px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 28px;
 }
-.about-body p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: rgba(255,255,255,0.72);
-  text-wrap: pretty;
+.ofer-quotemark {
+  font-family: var(--display);
+  font-size: 120px;
+  line-height: 0.7;
+  color: var(--yellow);
+  font-weight: 700;
+  letter-spacing: -0.04em;
 }
-.about-highlight {
-  color: var(--paper) !important;
+.ofer-text {
+  font-family: var(--display);
+  font-size: clamp(22px, 3.2vw, 38px);
+  line-height: 1.22;
   font-weight: 500;
-  padding-top: 20px;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  text-wrap: pretty;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+.ofer-sub {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.72);
+  max-width: 68ch;
+  margin: 0;
+}
+.ofer-footer {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-top: 8px;
   border-top: 1px solid var(--ink-3);
 }
-.about-cta {
+.ofer-sig {
   display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  padding-top: 12px;
+  flex-direction: column;
+  gap: 4px;
 }
-.btn-ghost-dark {
-  background: transparent;
-  color: var(--paper);
-  border: 1.5px solid var(--ink-3);
-}
-.btn-ghost-dark:hover {
-  background: var(--ink-3);
-  color: var(--paper);
-}
-
-/* REPORT FORM */
-.report-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 64px;
-  align-items: start;
-}
-@media (max-width: 980px) { .report-layout { grid-template-columns: 1fr; gap: 32px; } }
-.report-side { position: sticky; top: 96px; }
-@media (max-width: 980px) { .report-side { position: static; } }
-.report-trust {
-  display: flex;
-  gap: 24px;
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-}
-.report-trust > div { display: flex; flex-direction: column; gap: 4px; }
-.report-trust strong {
+.ofer-name {
   font-family: var(--display);
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--paper);
 }
-.report-trust small {
+.ofer-sig small {
   font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
+  font-size: 11px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--mute);
-}
-.report-form {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  position: relative;
-}
-@media (max-width: 600px) { .report-form { padding: 24px; } }
-.report-form.submitted .field,
-.report-form.submitted .form-grid,
-.report-form.submitted .upload-zone,
-.report-form.submitted #hp-submit,
-.report-form.submitted #cp-submit,
-.report-form.submitted p:last-of-type { display: none; }
-.report-form.submitted .form-success { display: flex; }
-
-.upload-zone {
-  position: relative;
-  border: 2px dashed var(--line-2);
-  border-radius: var(--radius);
-  transition: border-color 0.2s, background 0.2s;
-}
-.upload-zone.dragover {
-  border-color: var(--yellow);
-  background: var(--yellow-dim);
-}
-.upload-input {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 2;
-}
-.upload-prompt {
-  padding: 32px;
-  text-align: center;
-  color: var(--mute);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-.upload-prompt p { font-size: 14px; font-weight: 500; color: var(--ink); }
-.upload-prompt small { font-size: 12px; }
-.upload-thumbs {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding: 0 12px 12px;
-}
-.upload-thumbs:empty { display: none; }
-.upload-thumb {
-  width: 64px; height: 64px;
-  border-radius: var(--radius);
-  object-fit: cover;
-  border: 1px solid var(--line);
-}
-
-.form-success {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 16px;
-  padding: 40px 20px;
-}
-.form-success-icon {
-  width: 64px; height: 64px;
-  background: var(--yellow);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--ink);
-}
-.form-success p {
-  font-size: 15px;
-  color: var(--mute);
-  max-width: 40ch;
-  line-height: 1.5;
+  color: rgba(255,255,255,0.45);
 }
 </style>
 </body>

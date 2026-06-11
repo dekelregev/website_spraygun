@@ -130,7 +130,7 @@
 }
 .sg-float-badge {
   background: var(--yellow);
-  color: var(--ink);
+  color: var(--paper);
 }
 .sg-float-badge small {
   font-family: var(--mono);
@@ -159,7 +159,7 @@
 }
 .sg-float-phone:hover {
   background: var(--yellow);
-  color: var(--ink);
+  color: #fff;
   transform: translateY(-2px);
 }
 @media (max-width: 480px) {
