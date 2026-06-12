@@ -49,56 +49,75 @@
         <p>Owner, estimator, or shop manager will answer. Mon–Fri.</p>
         <strong>(702) 795-8686</strong>
       </a>
-      <a href="mailto:xxxxx@thespraygun.com" class="cs-card cs-feature">
+      <a href="#contact" class="cs-card cs-feature">
         <span class="cs-num">02</span>
-        <h2 class="h-3">Email us photos</h2>
-        <p>Snap photos of the damage and email them with a quick description. We respond within the hour.</p>
-        <strong>xxxxx@thespraygun.com →</strong>
+        <h2 class="h-3">Request a callback</h2>
+        <p>Leave your name and the best time to call. We'll get back to you within the hour.</p>
+        <strong>Get a callback →</strong>
       </a>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     EMAIL US
+     CONTACT SECTION
      ============================================================ -->
-<section class="section" id="email-us" style="background:var(--paper-2);" data-screen-label="08 Contact — Email Us">
+<section class="section" id="contact" style="background:var(--paper-2);" data-screen-label="08 Contact — Contact Form">
   <div class="wrap">
-    <div class="email-promo-layout">
-      <div class="email-promo-left">
-        <div class="eyebrow eyebrow-dot">Send us photos</div>
-        <h2 class="h-1" style="margin-top:14px;">Tell us what<br />happened.</h2>
-        <p class="lead" style="margin-top:16px; text-wrap:pretty;">
-          Snap a few photos of the damage and email them over with a quick description. We'll come back with an honest estimate — usually within the hour.
+    <div class="contact-split">
+      <div class="contact-split-left">
+        <div class="eyebrow eyebrow-dot">Get in touch</div>
+        <h2 class="h-1" style="margin-top:14px;">We'll reach<br />out to you.</h2>
+        <p class="lead" style="margin-top:16px;text-wrap:pretty;">
+          Leave your name and number and let us know the best time to call. We'll get back to you quickly with an honest assessment and free estimate.
         </p>
-        <div class="email-trust-row">
-          <div>
-            <strong>1 hr</strong>
-            <small>Response time</small>
+        <div class="contact-email-note">
+          <div class="contact-email-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
           </div>
           <div>
-            <strong>Free</strong>
-            <small>Estimates always</small>
-          </div>
-          <div>
-            <strong>Free</strong>
-            <small>Pickup &amp; delivery</small>
+            <p class="contact-email-label">Want to send photos of the damage?</p>
+            <a href="mailto:photos@thespraygun.com" class="contact-email-addr">photos@thespraygun.com</a>
           </div>
         </div>
       </div>
-      <div class="email-card">
-        <div class="email-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form-cp">
+        <input type="hidden" name="access_key" value="c3ff156c-3761-479f-8ebc-9711a91b3e7a" />
+        <input type="hidden" name="subject" value="New Contact Request — The Spray Gun Website" />
+        <input type="hidden" name="from_name" value="Spray Gun Website" />
+        <input type="checkbox" name="botcheck" style="display:none;" />
+        <div class="field">
+          <label for="cp-cf-name">Your name</label>
+          <input type="text" id="cp-cf-name" name="name" required placeholder="John Smith" />
         </div>
-        <h3 class="h-3">Email us directly</h3>
-        <p>Attach photos of your vehicle and describe the damage. We’ll respond within the hour during business hours.</p>
-        <a href="mailto:xxxxx@thespraygun.com" class="btn btn-yellow btn-lg" style="width:100%;justify-content:center;">
-          xxxxx@thespraygun.com <span class="arrow">→</span>
-        </a>
-        <div class="email-card-alt">
-          Prefer to call? <a href="tel:7027958686"><strong>(702) 795-8686</strong></a> — Mon–Fri 7:30 AM–5 PM
+        <div class="field" style="margin-top:20px;">
+          <label for="cp-cf-contact">Phone number or email</label>
+          <input type="text" id="cp-cf-contact" name="phone_or_email" required placeholder="(702) 555-1234  or  john@example.com" />
         </div>
-      </div>
+        <div class="field" style="margin-top:20px;">
+          <label for="cp-cf-time">Best time to reach you</label>
+          <select id="cp-cf-time" name="best_time">
+            <option value="" disabled selected>Select a time…</option>
+            <option>Morning (7:30 AM – 10 AM)</option>
+            <option>Midday (10 AM – 1 PM)</option>
+            <option>Afternoon (1 PM – 5 PM)</option>
+            <option>Anytime during business hours</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-yellow btn-lg" style="margin-top:28px;width:100%;justify-content:center;" id="cp-cf-submit">
+          Request a callback <span class="arrow">→</span>
+        </button>
+        <p style="margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);text-align:center;">
+          We respond within 24 hours
+        </p>
+        <div class="cf-success" id="cp-cf-success">
+          <div class="cf-success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h3 class="h-3">Got it — we'll call you.</h3>
+          <p>We'll reach out at your preferred time. In the meantime feel free to call us at (702) 795-8686.</p>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -155,6 +174,7 @@
         <div class="pm">ACH transfer</div>
         <div class="pm">Cash &amp; check</div>
       </div>
+      <a href="#" class="btn btn-yellow btn-lg pay-cta">Pay an invoice <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -463,69 +483,101 @@
 
 footer { margin-top: 0; }
 
-/* EMAIL SECTION */
-.email-promo-layout {
+/* CONTACT SPLIT SECTION */
+.contact-split {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 64px;
-  align-items: center;
+  align-items: start;
 }
-@media (max-width: 900px) { .email-promo-layout { grid-template-columns: 1fr; gap: 36px; } }
-.email-promo-left { display: flex; flex-direction: column; }
-.email-trust-row {
+@media (max-width: 900px) { .contact-split { grid-template-columns: 1fr; gap: 36px; } }
+.contact-split-left { display: flex; flex-direction: column; gap: 0; }
+.contact-email-note {
   display: flex;
-  gap: 32px;
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-  flex-wrap: wrap;
-}
-.email-trust-row > div { display: flex; flex-direction: column; gap: 4px; }
-.email-trust-row strong {
-  font-family: var(--display);
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-.email-trust-row small {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--mute);
-}
-.email-card {
-  background: var(--white);
-  border: 1px solid var(--line);
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 24px;
+  background: var(--yellow-dim);
+  border: 1px solid color-mix(in srgb, var(--yellow) 40%, transparent);
   border-radius: var(--radius-lg);
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  box-shadow: 0 8px 24px -8px rgba(11,11,12,0.08);
 }
-@media (max-width: 600px) { .email-card { padding: 28px; } }
-.email-card-icon {
-  width: 56px; height: 56px;
+.contact-email-icon {
+  width: 40px; height: 40px; flex-shrink: 0;
   background: var(--yellow);
   border-radius: var(--radius);
   display: flex; align-items: center; justify-content: center;
   color: var(--ink);
 }
-.email-card h3 { letter-spacing: -0.025em; }
-.email-card > p { font-size: 15px; line-height: 1.55; color: var(--mute); }
-.email-card-alt {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.06em;
+.contact-email-label {
+  font-size: 13px;
   color: var(--mute);
-  text-align: center;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
+  margin: 0 0 6px;
 }
-.email-card-alt a { color: var(--ink); }
-.email-card-alt strong { font-weight: 600; }
+.contact-email-addr {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.contact-email-addr:hover { color: var(--yellow-2); }
+
+.contact-form {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  position: relative;
+}
+@media (max-width: 600px) { .contact-form { padding: 28px; } }
+.contact-form.submitted .field,
+.contact-form.submitted #hp-cf-submit,
+.contact-form.submitted #cp-cf-submit,
+.contact-form.submitted p { display: none; }
+.contact-form.submitted .cf-success { display: flex; }
+
+.cf-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 40px 20px;
+}
+.cf-success-icon {
+  width: 64px; height: 64px;
+  background: var(--yellow);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink);
+}
+.cf-success p { font-size: 15px; color: var(--mute); max-width: 38ch; line-height: 1.5; }
 </style>
+<script>
+  (function () {
+    function setupCF(formId, submitId) {
+      var form = document.getElementById(formId);
+      var btn = document.getElementById(submitId);
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = 'Sending\u2026';
+        fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) })
+          .then(function (r) { return r.json(); })
+          .then(function (res) {
+            if (res.success) { form.classList.add('submitted'); }
+            else { alert('Something went wrong. Please call us at (702) 795-8686.'); btn.disabled = false; btn.textContent = 'Request a callback \u2192'; }
+          })
+          .catch(function () { alert('Network error. Please call (702) 795-8686.'); btn.disabled = false; btn.textContent = 'Request a callback \u2192'; });
+      });
+    }
+    setupCF('contact-form-hp', 'hp-cf-submit');
+    setupCF('contact-form-cp', 'cp-cf-submit');
+  })();
+</script>
 </body>
 </html>
