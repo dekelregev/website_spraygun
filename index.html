@@ -78,7 +78,7 @@
 
       <div class="hero-side">
         <div class="row" style="margin-top:8px;">
-          <a href="contact.html#quote" class="btn btn-yellow btn-lg">Get a free quote <span class="arrow">→</span></a>
+          <a href="#contact" class="btn btn-yellow btn-lg">Have us reach out <span class="arrow">→</span></a>
           <a href="tel:7027958686" class="btn btn-ghost-light btn-lg">(702) 795-8686</a>
         </div>
       </div>
@@ -349,79 +349,62 @@
 </section>
 
 <!-- ============================================================
-     DAMAGE REPORT FORM
+     CONTACT SECTION
      ============================================================ -->
-<section class="section" id="report" data-screen-label="01 Home — Report Damage">
+<section class="section" id="contact" style="background:var(--paper-2);" data-screen-label="01 Home — Contact">
   <div class="wrap">
-    <div class="report-layout">
-      <div class="report-side">
-        <div class="eyebrow eyebrow-dot">Report damage</div>
-        <h2 class="h-1" style="margin-top:14px;">Tell us what<br />happened.</h2>
-        <p class="lead" style="margin-top:16px;">
-          Upload photos and describe the damage. We'll get back to you within the hour with an honest assessment and free estimate.
+    <div class="contact-split">
+      <div class="contact-split-left">
+        <div class="eyebrow eyebrow-dot">Get in touch</div>
+        <h2 class="h-1" style="margin-top:14px;">We'll reach<br />out to you.</h2>
+        <p class="lead" style="margin-top:16px;text-wrap:pretty;">
+          Leave your name and number and let us know the best time to call. We'll get back to you quickly with an honest assessment and free estimate.
         </p>
-        <div class="report-trust">
-          <div>
-            <strong>1 hr</strong>
-            <small>Response time</small>
+        <div class="contact-email-note">
+          <div class="contact-email-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
           </div>
           <div>
-            <strong>Free</strong>
-            <small>Estimates always</small>
-          </div>
-          <div>
-            <strong>Free</strong>
-            <small>Pickup &amp; delivery</small>
+            <p class="contact-email-label">Want to send photos of the damage?</p>
+            <a href="mailto:photos@thespraygun.com" class="contact-email-addr">photos@thespraygun.com</a>
           </div>
         </div>
       </div>
-      <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="report-form" id="report-form">
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form-hp">
         <input type="hidden" name="access_key" value="c3ff156c-3761-479f-8ebc-9711a91b3e7a" />
-        <input type="hidden" name="subject" value="New Damage Report — The Spray Gun Website" />
+        <input type="hidden" name="subject" value="New Contact Request — The Spray Gun Website" />
         <input type="hidden" name="from_name" value="Spray Gun Website" />
         <input type="checkbox" name="botcheck" style="display:none;" />
-        <div class="form-grid">
-          <div class="field">
-            <label for="hp-name">Full name</label>
-            <input type="text" id="hp-name" name="name" required placeholder="John Smith" />
-          </div>
-          <div class="field">
-            <label for="hp-phone">Phone number</label>
-            <input type="tel" id="hp-phone" name="phone" required placeholder="(702) 555-1234" />
-          </div>
+        <div class="field">
+          <label for="hp-cf-name">Your name</label>
+          <input type="text" id="hp-cf-name" name="name" required placeholder="John Smith" />
         </div>
         <div class="field" style="margin-top:20px;">
-          <label for="hp-email">Email address</label>
-          <input type="email" id="hp-email" name="email" required placeholder="john@example.com" />
+          <label for="hp-cf-contact">Phone number or email</label>
+          <input type="text" id="hp-cf-contact" name="phone_or_email" required placeholder="(702) 555-1234  or  john@example.com" />
         </div>
         <div class="field" style="margin-top:20px;">
-          <label for="hp-message">What happened?</label>
-          <textarea id="hp-message" name="message" required placeholder="Describe the damage, accident, or work needed..."></textarea>
+          <label for="hp-cf-time">Best time to reach you</label>
+          <select id="hp-cf-time" name="best_time">
+            <option value="" disabled selected>Select a time…</option>
+            <option>Morning (7:30 AM – 10 AM)</option>
+            <option>Midday (10 AM – 1 PM)</option>
+            <option>Afternoon (1 PM – 5 PM)</option>
+            <option>Anytime during business hours</option>
+          </select>
         </div>
-        <div class="field" style="margin-top:20px;">
-          <label>Upload photos of the damage</label>
-          <div class="upload-zone" id="hp-upload-zone">
-            <input type="file" name="attachment" id="hp-photos" accept="image/*" multiple class="upload-input" />
-            <div class="upload-prompt">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-              <p>Click to upload or drag photos here</p>
-              <small>JPG, PNG — up to 5 MB each, max 3 files</small>
-            </div>
-            <div class="upload-thumbs" id="hp-thumbs"></div>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-yellow btn-lg" style="margin-top:28px;width:100%;justify-content:center;" id="hp-submit">
-          Send damage report <span class="arrow">→</span>
+        <button type="submit" class="btn btn-yellow btn-lg" style="margin-top:28px;width:100%;justify-content:center;" id="hp-cf-submit">
+          Request a callback <span class="arrow">→</span>
         </button>
-        <p style="margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);text-align:center;">
-          We respond within 1 hour during business hours
+        <p style="margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);text-align:center;">
+          We respond within 24 hours
         </p>
-        <div class="form-success" id="hp-success">
-          <div class="form-success-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <div class="cf-success" id="hp-cf-success">
+          <div class="cf-success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
-          <h3 class="h-3">Report received.</h3>
-          <p>We'll review your photos and get back to you within the hour. If it's after hours, first thing tomorrow.</p>
+          <h3 class="h-3">Got it — we'll call you.</h3>
+          <p>We'll reach out at your preferred time. In the meantime feel free to call us at (702) 795-8686.</p>
         </div>
       </form>
     </div>
@@ -441,7 +424,7 @@
         </h2>
         <div class="row" style="margin-top:32px; gap:14px;">
           <a href="tel:7027958686" class="btn btn-ink btn-lg">(702) 795-8686</a>
-          <a href="#report" class="btn btn-ghost btn-lg">Submit photos <span class="arrow">→</span></a>
+          <a href="#contact" class="btn btn-ghost btn-lg">Get a callback <span class="arrow">→</span></a>
         </div>
         <div class="cta-meta">
           <span>Mon–Fri 7:30 AM – 5:00 PM</span>
@@ -457,67 +440,6 @@
 
 <script src="assets/shared.js"></script>
 <script>
-  /* Upload preview + form submission */
-  (function () {
-    function setupForm(formId, zoneId, inputId, thumbsId, submitId, successId) {
-      var form = document.getElementById(formId);
-      var zone = document.getElementById(zoneId);
-      var input = document.getElementById(inputId);
-      var thumbs = document.getElementById(thumbsId);
-      var submitBtn = document.getElementById(submitId);
-      if (!form || !zone || !input) return;
-
-      /* drag-over highlight */
-      zone.addEventListener("dragover", function (e) { e.preventDefault(); zone.classList.add("dragover"); });
-      zone.addEventListener("dragleave", function () { zone.classList.remove("dragover"); });
-      zone.addEventListener("drop", function (e) {
-        e.preventDefault(); zone.classList.remove("dragover");
-        if (e.dataTransfer.files.length) {
-          input.files = e.dataTransfer.files;
-          showThumbs(input.files);
-        }
-      });
-
-      /* preview thumbs */
-      input.addEventListener("change", function () { showThumbs(input.files); });
-      function showThumbs(files) {
-        thumbs.innerHTML = "";
-        Array.from(files).slice(0, 3).forEach(function (f) {
-          var img = document.createElement("img");
-          img.className = "upload-thumb";
-          img.src = URL.createObjectURL(f);
-          thumbs.appendChild(img);
-        });
-      }
-
-      /* AJAX submit */
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Sending…";
-        var data = new FormData(form);
-        fetch("https://api.web3forms.com/submit", { method: "POST", body: data })
-          .then(function (r) { return r.json(); })
-          .then(function (res) {
-            if (res.success) {
-              form.classList.add("submitted");
-            } else {
-              alert("Something went wrong. Please call us at (702) 795-8686.");
-              submitBtn.disabled = false;
-              submitBtn.textContent = "Send damage report →";
-            }
-          })
-          .catch(function () {
-            alert("Network error. Please call us at (702) 795-8686.");
-            submitBtn.disabled = false;
-            submitBtn.textContent = "Send damage report →";
-          });
-      });
-    }
-
-    setupForm("report-form", "hp-upload-zone", "hp-photos", "hp-thumbs", "hp-submit", "hp-success");
-  })();
-
   /* Before/After slider */
   (function () {
     const wrap = document.getElementById("ba");
@@ -996,97 +918,63 @@ footer { margin-top: 0; }
   color: var(--paper);
 }
 
-/* REPORT FORM */
-.report-layout {
+/* CONTACT SPLIT SECTION */
+.contact-split {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 64px;
   align-items: start;
 }
-@media (max-width: 980px) { .report-layout { grid-template-columns: 1fr; gap: 32px; } }
-.report-side { position: sticky; top: 96px; }
-@media (max-width: 980px) { .report-side { position: static; } }
-.report-trust {
+@media (max-width: 900px) { .contact-split { grid-template-columns: 1fr; gap: 36px; } }
+.contact-split-left { display: flex; flex-direction: column; gap: 0; }
+.contact-email-note {
   display: flex;
-  gap: 24px;
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 24px;
+  background: var(--yellow-dim);
+  border: 1px solid color-mix(in srgb, var(--yellow) 40%, transparent);
+  border-radius: var(--radius-lg);
 }
-.report-trust > div { display: flex; flex-direction: column; gap: 4px; }
-.report-trust strong {
-  font-family: var(--display);
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1;
+.contact-email-icon {
+  width: 40px; height: 40px; flex-shrink: 0;
+  background: var(--yellow);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink);
 }
-.report-trust small {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.contact-email-label {
+  font-size: 13px;
   color: var(--mute);
+  margin: 0 0 6px;
 }
-.report-form {
+.contact-email-addr {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.contact-email-addr:hover { color: var(--yellow-2); }
+
+.contact-form {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 40px;
   position: relative;
 }
-@media (max-width: 600px) { .report-form { padding: 24px; } }
-.report-form.submitted .field,
-.report-form.submitted .form-grid,
-.report-form.submitted .upload-zone,
-.report-form.submitted #hp-submit,
-.report-form.submitted #cp-submit,
-.report-form.submitted p:last-of-type { display: none; }
-.report-form.submitted .form-success { display: flex; }
+@media (max-width: 600px) { .contact-form { padding: 28px; } }
+.contact-form.submitted .field,
+.contact-form.submitted #hp-cf-submit,
+.contact-form.submitted #cp-cf-submit,
+.contact-form.submitted p { display: none; }
+.contact-form.submitted .cf-success { display: flex; }
 
-.upload-zone {
-  position: relative;
-  border: 2px dashed var(--line-2);
-  border-radius: var(--radius);
-  transition: border-color 0.2s, background 0.2s;
-}
-.upload-zone.dragover {
-  border-color: var(--yellow);
-  background: var(--yellow-dim);
-}
-.upload-input {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 2;
-}
-.upload-prompt {
-  padding: 32px;
-  text-align: center;
-  color: var(--mute);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-.upload-prompt p { font-size: 14px; font-weight: 500; color: var(--ink); }
-.upload-prompt small { font-size: 12px; }
-.upload-thumbs {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding: 0 12px 12px;
-}
-.upload-thumbs:empty { display: none; }
-.upload-thumb {
-  width: 64px; height: 64px;
-  border-radius: var(--radius);
-  object-fit: cover;
-  border: 1px solid var(--line);
-}
-
-.form-success {
+.cf-success {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -1094,21 +982,37 @@ footer { margin-top: 0; }
   gap: 16px;
   padding: 40px 20px;
 }
-.form-success-icon {
+.cf-success-icon {
   width: 64px; height: 64px;
   background: var(--yellow);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   color: var(--ink);
 }
-.form-success p {
-  font-size: 15px;
-  color: var(--mute);
-  max-width: 40ch;
-  line-height: 1.5;
-}
+.cf-success p { font-size: 15px; color: var(--mute); max-width: 38ch; line-height: 1.5; }
 </style>
+<script>
+  (function () {
+    function setupCF(formId, submitId) {
+      var form = document.getElementById(formId);
+      var btn = document.getElementById(submitId);
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = 'Sending\u2026';
+        fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) })
+          .then(function (r) { return r.json(); })
+          .then(function (res) {
+            if (res.success) { form.classList.add('submitted'); }
+            else { alert('Something went wrong. Please call us at (702) 795-8686.'); btn.disabled = false; btn.textContent = 'Request a callback \u2192'; }
+          })
+          .catch(function () { alert('Network error. Please call (702) 795-8686.'); btn.disabled = false; btn.textContent = 'Request a callback \u2192'; });
+      });
+    }
+    setupCF('contact-form-hp', 'hp-cf-submit');
+    setupCF('contact-form-cp', 'cp-cf-submit');
+  })();
+</script>
 </body>
 </html>
